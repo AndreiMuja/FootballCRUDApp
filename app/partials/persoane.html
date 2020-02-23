@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="../style/persoane.css">
+</head>
+<h1>Tabel Antrenori</h1>
+
+<body>
+	<div>
+		<div>
+			<table id="ANTRENOR">
+				<thead>
+					<th>
+						numeAntrenor
+					</th>
+					<th>
+						Varsta
+					</th>
+					<th>
+						Club
+					</th>
+
+				</thead>
+				<tr ng-repeat="antrenor in antrenori" ng-include="getTemplate(antrenor)">
+					<script type="text/ng-template" id="display">
+						<td>{{antrenor.numeAntrenor}}</td>
+						<td>{{antrenor.varsta}}</td>
+						<td>{{antrenor.club}}</td>
+						<td colspan="3">
+							<input type="button" value="delete" ng-click="deleteAntrenor(antrenor)">
+							<input type="button" value="edit" ng-click="editAntrenor(antrenor)">
+							<a ui-sref="antrenorInfo({antrenorId : antrenor.id})">Detalii echipa</a>
+						</td>
+					</script>
+					<script type="text/ng-template" id="edit">
+						<td>
+							<input type="text" ng-model="antrenor.numeAntrenor">
+						</td>
+						<td>
+							<input type="text" ng-model="antrenor.varsta">
+						</td>
+						<td>
+							<input type="text" ng-model="antrenor.club">
+						</td>
+						<td colspan="1">
+							<input type="button" value="save" ng-click="saveAntrenor(antrenor)">
+						</td>
+					</script>
+				</tr>
+			</table>
+			<form novalidate class="contact_form" method="post" name="contact_form">
+				<ui>
+					<li>
+						<h3>Desemneaza antrenor</h3>
+						<span class="required_notification">Campuri obligatorii</span>
+					</li>
+					<li>
+						<label for="nume">Nume:</label>
+						<input type="text" ng-model="antrenor.numeAntrenor" ng-required="true">
+					</li>
+					<li>
+						<label for="varsta">Varsta:</label>
+						<input type="text" ng-model="antrenor.varsta" ng-required="true">
+					</li>
+					<li>
+						<label for="club">Club:</label>
+						<input type="text" ng-model="antrenor.club" ng-required="true">
+					</li>
+					<li>
+						<input class="submit" type="button" value="Adauga" ng-click="addAntrenor(antrenor)">
+					</li>
+				</ui>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+body {
+    background: url(http://designoval.com/wp-content/uploads/2015/04/Cool_backgrounds_hd-6.jpg);
+    background-size: cover;
+    font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+.contact_form ul {
+    width: 750px;
+    list-style-type: none;
+    list-style-position: outside;
+    margin: 0px;
+    padding: 0px;
+}
+
+.contact_form li {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.contact_form h3,
+.contact_form label {
+    font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.required_notification {
+    font-size: 15px;
+    color: #68b12f;
+    font-weight: bold;
+    margin: -10px 0 0 0;
+    display: inline;
+    /*float: right;*/
+}
+
+.contact_form label {
+    width: 150px;
+    margin-top: 3px;
+    display: inline-block;
+    /*float: left;*/
+    padding: 3px;
+    font-weight: bold;
+}
+
+.contact_form input {
+    height: 40px;
+    width: 220px;
+    padding: 5px 8px;
+    font-weight: bold;
+    font-size: 20px;
+    border: 1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius: 2px;
+    padding-right: 30px;
+}
+
+.submit {
+    margin-left: 156px;
+    width: 150px;
+    display: inline-block;
+    /*float: center;*/
+    background-color: #68b12f;
+    border: 1px solid #509111;
+    border-bottom: 1px solid #5b992b;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    padding: 6px 20px;
+    text-align: center;
+    text-shadow: 0 -1px 0 #396715;
+}
+
+.submit:hover {
+    opacity: .85;
+    cursor: pointer;
+}
+
+.submit:active {
+    border: 1px solid #20911e;
+    box-shadow: 0 0 10px 5px #356b0b inset;
+}
+
+.contact_form input.ng-invalid.ng-touched {
+    background-color: red;
+}
+
+.contact_form input.ng-valid.ng-touched {
+    box-shadow: 0 0 70px #5cd053;
+    border-color: blue;
+}
+
+#ANTRENOR {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#ANTRENOR td,
+#ANTRENOR th {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+    font-weight: bold;
+}
+
+#ANTRENOR tr:nth-child(even) {
+    background-color: gray;
+}
+
+#ANTRENOR tr:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#ANTRENOR th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#ANTRENOR input {
+    margin-left: 100px;
+    width: 75px;
+    display: inline-block;
+    /*float: center;*/
+    background-color: purple;
+    border: 1px solid #509111;
+    border-bottom: 1px solid #5b992b;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    padding: 3px 10px;
+    text-align: center;
+    text-shadow: 0 -1px 0 #396715;
+}
+
+a {
+    color: #68b12f;
+    font-weight: bold;
+}

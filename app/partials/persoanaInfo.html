@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../style/persoanaInfo.css">
+</head>
+<body>
+	<div>
+		<div>
+			<div>Antrenorul cu numele de: {{antrenor.numeAntrenor}}</div>
+			<div>cu varsta de: {{antrenor.varsta}}</div>
+			<div>este manager la clubul: {{antrenor.club}}</div>
+			<div>si are in componenta sa jucatorii:</div>
+			<table id="JUCATOR">
+				<thead>
+					<th>
+						Fotbalist
+					</th>
+					<th>
+						Pozitie
+					</th>
+				</thead>
+				<tr ng-repeat="jucator in antrenor.jucatori" ng-include="getTemplate(jucator)">
+					<script type="text/ng-template" id="display">
+						<td>{{jucator.nume}}</td>
+						<td>{{jucator.descriere}}</td>
+						<td colspan="3">
+							<input type="button" value="delete" ng-click="deleteJucator(jucator)">
+							<input type="button" value="edit" ng-click="editJucator(jucator)">
+						</td>
+					</script>
+					<script type="text/ng-template" id="edit">
+						<td>
+							<input type="text" ng-model="jucator.nume">
+						</td>
+						<td>
+							<input type="text" ng-model="jucator.descriere">
+						</td>
+						<td colspan="3">
+							<input type="button" value="save" ng-click="saveJucator(jucator)">
+						</td>
+					</script>
+				</tr>
+			</table>
+			<div>Creeaza un jucator: </div>
+			<form novalidate class="contact_form" method="post" name="contact_form">
+				<ui>
+					<li>
+						<label for="nume">Denumire jucator:</label>
+						<input type="text" ng-model="jucator.nume" ng-required="true">
+					</li>
+					<li>
+						<label for="descriere">Descriere jucator:</label>
+						<input type="text" ng-model="jucator.descriere" ng-required="true">
+					</li>
+					<li>
+						<input class="add" type="button" value="adauga nou jucator" ng-click="addJucator(jucator)">
+					</li>
+				</ui>
+			</form>
+		</div>
+		<a ui-sref="antrenori">INAPOI</a>
+	</div>
+	</div>
+</body>
+
+</html>
